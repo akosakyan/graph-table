@@ -1,0 +1,21 @@
+// Custom Theming for Angular Material
+@use 'node_modules/@angular/material' as mat;
+@use 'fonts' as fonts;
+@use 'theme' as theme;
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: fonts.$font-family;
+  transition: background-color 350ms ease;
+}
+
+@include mat.core(theme.$app-typography);
+
+.spider-light-theme {
+  @include mat.all-component-themes(theme.$app-light-theme);
+}
+
+.spider-dark-theme {
+  @include mat.all-component-themes(theme.$app-dark-theme);
+}

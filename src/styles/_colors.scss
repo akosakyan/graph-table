@@ -1,0 +1,9 @@
+@use 'node_modules/@angular/material' as mat;
+@use 'theme' as theme;
+
+$colors: (
+  primary: mat.get-color-from-palette(theme.$app-primary-palette, default),
+  primary-lighter: mat.get-color-from-palette(theme.$app-primary-palette, lighter),
+  primary-darker: mat.get-color-from-palette(theme.$app-primary-palette, darker),
+  primary-text: mat.get-color-from-palette(theme.$app-primary-palette, text),
+);
